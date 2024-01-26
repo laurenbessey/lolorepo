@@ -35,4 +35,4 @@
 2. Place a piece of cake in the icing and roll to coat using 2 forks. Transfer it into the coconut and quickly roll to coat all over in coconut. Transfer to tray.
 3. Repeat with remaining sponges.
 4. Stand for 1 to 2 hours, or until set. Then serve with tea and coffee.
-## Enjoy! 
+## Enjoy!
