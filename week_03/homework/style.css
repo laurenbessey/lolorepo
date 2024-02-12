@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+/* font-family: 'Sixtyfour', sans-serif; (for sub headings) */
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+/* font-family: 'Honk', system-ui; (for HEADER) */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Honk&display=swap');
+/* font-family: 'Dosis', sans-serif;
+font-family: 'Honk', system-ui; (for text) */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch+Pop&display=swap');
+/* font-family: 'Rubik Glitch Pop', system-ui; (for sub sub header)*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik+Glitch+Pop&display=swap');
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Rubik Glitch Pop', system-ui; (for subsubsub header */
+
+* {
+    margin: 10;
+    padding: 2;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1rem;
+    padding: 20px, 50px, 150px;
+    text-align: left;
+}
+
+header {
+    font-family: 'Honk', system-ui;
+    font-size: 4rem;
+    display:inline-block;
+    position: relative;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    z-index:100;
+
+}
+
+h2 {
+    font-family: 'Sixtyfour', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Rubik Glitch Pop', system-ui;
+    font-size: 2rem;
+}
+
+h4 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+
+html {
+    background-color: darkgray;
+}
+
+nav {
+    background-color: cornflowerblue;
+    position:static;
+    top: 20%;
+    right: 100px;
+    display: center;
+}
+
+aside {
+    background-color: blueviolet;
+    width: 50%;
+    height: 100vh;
+    position:right;
+    display: inline-block;
+}
+
+nav ul {
+    display: inline;
+    margin: 0;
+    padding: 15px 4px 17px 0;
+    list-style-type: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    padding: 15px 10px;
+    background: #FFF;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+nav ul li:hover {
+    background: #555;
+    color: #FFF;
+
+}
+
+nav ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 150px;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+nav ul li ul li {
+    background: #555;
+    display: block;
+    color: #fff;
+    text-shadow: 0 -1px 0 #000;
+}
+
+nav ul li ul li:hover {
+    background: #666;
+
+}
+
+nav ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+img {
+    display: center;
+}
+
