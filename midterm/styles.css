@@ -29,28 +29,29 @@ body {
     color: whitesmoke;
   }
 
-  .orbitron-class {
+.orbitron-class {
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400px;
     font-style: normal;
   }
 
-  .work-sans-class {
+.work-sans-class {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400px;
     font-style: normal;
   }
 
-  .container {
+.container {
     width: 1200px;
     margin: 0 auto;
     font-size: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
+    
   }
 
   .book {
@@ -70,68 +71,46 @@ body {
   .scroll-square {
     border: 3px solid transparent;
     border-radius: 5px;
+    overflow: hidden;
+    white-space:nowrap;
   }
 
   .scroll-text {
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
     transform: translateX(100%);
 
-    -moz-animation: my-animation 15s linear infinite;
-    -webkit-animation: my-animation 15s linear infinite;
-    animation: my-animation 15s linear infinite;
-  }
+    animation: my-animation 20s linear infinite;
+    animation-iteration-count: infinite;
 
-  @-webkit-keyframes my-animation {
-    from { -webkit-transform: translateX(100%); }
-    to { -webkit-transform: translateX(-100%); }
+    white-space:nowrap;
+    overflow: hidden;
   }
 
   @keyframes my-animation {
-    from {
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-    }
-    to {
-        -moz-transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-    }
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
   }
 
   .scroll-square-2 {
     border: 3px solid transparent;
     border-radius: 5px;
+    white-space:nowrap;
+    overflow: hidden;
   }
 
   .scroll-text-2 {
     text-align: right;
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
 
-    -moz-animation: my-animation-2 15s linear infinite;
-    -webkit-animation: my-animation-2 15s linear infinite;
-    animation: my-animation-2 15s linear infinite;
-  }
-
-  @-webkit-keyframes my-animation-2 {
-    from { -webkit-transform: translateX(-100%); }
-    to { -webkit-transform: translateX(100%); }
+    animation: my-animation-2 20s linear infinite;
+    animation-iteration-count: infinite;
+    
+    white-space:nowrap;
+    overflow: hidden;
   }
 
   @keyframes my-animation-2 {
-    from {
-        -moz-transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-    }
-    to {
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-    }
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
   }
 
   .flip-card {
@@ -185,7 +164,7 @@ a {
     text-decoration: none;
 }
 
-#contact {
+.contact {
   text-align: left;
 }
 
