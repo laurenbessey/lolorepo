@@ -185,6 +185,10 @@ a {
     text-decoration: none;
 }
 
+#contact {
+  text-align: left;
+}
+
 p {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
