@@ -194,6 +194,18 @@ h3 {
   background: rgba(233,196,35,0.5);
   color: whitesmoke;
   opacity: 0;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+  text-align: center;
+  h2 {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+    color: whitesmoke;
+  }
 }
 
 /* tablet size */
