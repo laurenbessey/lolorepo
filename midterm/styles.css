@@ -190,6 +190,12 @@ h3 {
   opacity: 0;
 }
 
+.active {
+  background: rgba(233,196,35,0.5);
+  color: whitesmoke;
+  opacity: 0;
+}
+
 /* tablet size */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .container {
@@ -202,9 +208,14 @@ h3 {
     opacity: 1;
   }
 
-  .flip-card:active .flip-card-inner {
-    transform: rotateY(180deg);
-  }
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+}
+
+.active {
+  opacity: 1;
+}
+
 }
 
 
@@ -220,8 +231,12 @@ h3 {
     opacity: 1;
   }
 
-  .flip-card:active .flip-card-inner {
-    transform: rotateY(180deg);
-  }
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+}
+
+.active {
+  opacity: 1;
+}
 
 }
