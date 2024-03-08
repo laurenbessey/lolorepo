@@ -69,42 +69,42 @@ body {
   }
 
   .scroll-square {
-    border: 3px solid transparent;
-    border-radius: 5px;
+    max-width: 100%;
     overflow: hidden;
-    white-space: nowrap;
-    width: infinite;
 
   }
 
   .scroll-text {
-    transform: translateX(100%);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: my-animation 10s linear infinite;
+  }
 
-    animation: my-animation 20s linear infinite;
-    animation-iteration-count: infinite;
+  .scroll-text h1 {
+    display: inline-block;
   }
 
   @keyframes my-animation {
-    from { transform: translateX(100%); }
-    to { transform: translateX(-100%); }
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
   }
 
   .scroll-square-2 {
-    border: 3px solid transparent;
-    border-radius: 5px;
-    white-space:nowrap;
+    width: 100%;
     overflow: hidden;
-    width: infinite;
+    white-space: nowrap;
+    display: flex;
   }
 
   .scroll-text-2 {
     text-align: right;
     transform: translateX(-100%);
-
-    animation: my-animation-2 20s linear infinite;
-    animation-iteration-count: infinite;
-    
-    
+    animation: my-animation-2 120s linear infinite;
   }
 
   @keyframes my-animation-2 {
