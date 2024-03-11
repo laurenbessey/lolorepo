@@ -247,8 +247,13 @@ h3 {
     transform: none;
 }
 
-.active {
+  .active {
   opacity: 1;
+}
+
+  nav {
+  display: flex;
+  flex-direction: column;
 }
 
 }
