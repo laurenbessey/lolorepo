@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Objects and JSON</title>
+    <script type="text/javascript">
+      // initialize a new object and store it as a variable named customer
+      const customer = {
+        name: 'Tony',
+        age: 23,
+        married: false,
+        pets: ['dog', 'cat', 'iguana'],
+        siblings: [
+          {name: 'Mary', age: 32, married: true, pets: ['snail', 'spider']},
+          {name: 'Billy', age: 16, married: false},
+        ],
+      }
+
+      // sometimes we need to convert a JS object we built into JSON for sharing
+      // we do this with JSON.stringify()
+      const customerJSON = JSON.stringify(customer)
+      console.log(customerJSON)
+
+      // sometimes we receive some JSON and we need to make it a js object
+      const customerObject = JSON.parse(customerJSON)
+      console.log(customerObject)
+
+
+      // Modify the customer object:
+      // Change Tony's Name
+      console.log(customer.name) // Tony
+      customer.name = 'Anthony'
+      console.log(customer.name) // Anthony
+
+      // add a new property defining the customers eyeColor
+      customer.eyeColor = 'green'
+      console.log(customer)
+
+      // add the pets and siblings properties to both Mary and Billy
+      customer.siblings[0].pets=['snail', 'spider']
+
+      // Add an Ton'ys location, be sure to include the fields: houseNumber, street name, town, city
+      customer.pets.push('chicken')
+
+      // Log the following:
+      // Mary's marrital status
+      console.log(customer.siblings[0].married)
+      // index 0 bc Mary is the first one, we start with 0
+      // Tony's age
+      console.log(customer.age)
+      // All of Tony's pets
+      // need a loop to list them all out
+      for (var i = 0; i < customer.pets.length; i++) {
+        console.log(customer.pets[i])
+      }
+     
+    </script>
+  </head>
+  <body></body>
+</html>

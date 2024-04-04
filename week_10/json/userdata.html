@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>exercise user data</title>
+        <script type="text/javascript">
+            async function logApiResults() {
+                const response = await fetch(
+                    'https://randomuser.me/api/'
+                )
+                const result = await response.json()
+                const message = `${result.first} ${result.last}'s username is ${result.username} and mailing address is ${result.location}, ${result.number} ${result.street}, ${result.name}, ${result.city}, ${result.state}, ${result.country}, ${result.postcode}.`
+                console.log(message)
+            }
+
+            logApiResults()
+            // undefined ??
+          
+
+          
+        </script>
+    </head>
+    <body>
+     
+    </body>
+</html>
