@@ -6,15 +6,16 @@
         <title>write a function homework</title>
         <script type="text/javascript">
 
-            //     const kittenBtn = document.getElementById(catButton)
-            // attach button to const
+            const refresh = () => {
+            window.location.reload()
+            }
+            // refresh function
 
-            //      function refresh() {
-            //      window.location.reload()
-            //      }
+            document.addEventListener('DOMContentLoaded', () => {
+                document.getElementById('catButton').addEventListener('click', refresh)
+            })
 
-            //      kittenBtn.addEventListener("click", refresh)
-            // upon click of button, trigger refresh function
+            // wait until all the content has loaded - then get the button element, and when it is clicked, trigger the refresh function above
 
         </script>
         <style type="text/CSS">
@@ -38,7 +39,7 @@
     </head>
     <body>
         <div id="kitten_div">
-        <button type="button" id="catButton" onClick="window.location.reload()">click for kitten!</button>
+        <button type="button" id="catButton">click for new kitten!</button>
         <img src="https://cataas.com/cat"/>
         </div>
 
