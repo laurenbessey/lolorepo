@@ -31,6 +31,41 @@
         }
     })    
         </script>
+        <style>
+            @media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+    transform: translateX(0);
+}
+        </style>
     </head>
     <body>
         <nav>
@@ -62,13 +97,13 @@
                 <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <div class="col-md-3">
+    
                                 <div class="card">
                                     <div class="card-img">
                                         <img src="https://via.placeholder.com/700x500.png/CB997E/333333?text=1" class="img-fluid">
                                     </div>
                                     <div class="card-img-overlay">Slide 1</div>
-                                </div>
+                        
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -283,10 +318,52 @@
                 </div>
             </div>		
         </div>
-
-
-        <h1>
+        <div id="Wrap">
+            <img class="FollowBox" src="./IMG/transparent_3.png" alt="">
+            <img class="FollowBox" src="./IMG/transparent_2.png" alt="">
+            <img class="FollowBox" src="./IMG/transparent_1.png" alt="">
+            <img class="FollowBox" src="./IMG/transparent_4.png" alt="">
+          </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+          <script type="text/javascript">
+            let FollowBox = "#Wrap .FollowBox";
+  gsap.set(FollowBox, {
+    xPercent: -50,
+    yPercent: -50,
+    scale: 0
+  });
+  
+  window.addEventListener("mousemove", (e) => {
+    gsap.to(FollowBox, {
+      duration: 0.5,
+      overwrite: "auto",
+      x: e.clientX,
+      y: e.clientY,
+      stagger: 0.15,
+      ease: "none"
+    });
+  
+    let TL = gsap.timeline({
+      defaults: { duration: 0.5, ease: "none" }
+    });
+    TL.to(FollowBox, {
+      scale: 1,
+      overwrite: "auto",
+      stagger: { amount: 0.15, from: "start", ease: "none" }
+    });
+    TL.to(
+      FollowBox,
+      {
+        overwrite: "auto",
+        scale: 0,
+        stagger: { amount: 0.15, from: "end", ease: "none" }
+      },
+      "<+=2.5"
+    );
+  });
            
-        </h1>
+        </script>
     </body>
 </html>

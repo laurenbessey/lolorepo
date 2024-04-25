@@ -9,6 +9,16 @@ html, body {
     margin: 0;
 }
 
+.home {
+    /* background-image: url("./IMG/background.jpg");
+    background-size: auto;
+    background-repeat: no-repeat; */
+    background: url('./IMG/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
 html {
     background: rgb(51,108,20);
     background: linear-gradient(200deg, rgba(51,108,20,1) 0%, rgba(135,227,154,1) 50%, rgba(51,108,20,1) 100%);
@@ -32,6 +42,8 @@ h3 {
     --bs-nav-pills-border-radius: var(--bs-border-radius);
     --bs-nav-pills-link-active-color: whitesmoke;
     --bs-nav-pills-link-active-bg: rgb(51,108,20);
+    pointer-events:all;
+    z-index:100000;
 }
 .nav {
     --bs-nav-link-padding-x: 1rem;
@@ -45,6 +57,7 @@ h3 {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+
 }
 
 .kosugi-maru-regular {
@@ -111,6 +124,8 @@ h3 {
     margin: 0 auto;
     font-size: 1rem;
     display: block;
+    
+
   }
 
   @media (max-width: 767px) {
@@ -146,3 +161,34 @@ h3 {
 .carousel-inner .carousel-item-start { 
     transform: translateX(0);
 }
+  
+  #Wrap {
+
+    background: none;
+    overflow:visible;
+  }
+  
+  #Wrap .FollowBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 250px;
+    pointer-events: none;
+  }
+  
+  #Wrap .FollowBox:nth-child(1) {
+    z-index: 4;
+  }
+  
+  #Wrap .FollowBox:nth-child(2) {
+    z-index: 3;
+  }
+  
+  #Wrap .FollowBox:nth-child(3) {
+    z-index: 2;
+  }
+  
+  #Wrap .FollowBox:nth-child(4) {
+    z-index: 1;
+  }
