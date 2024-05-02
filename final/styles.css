@@ -120,13 +120,28 @@ h3 {
 }
 
 .container2 {
-    width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .container1 {
+    width: 30%;
     margin: 0 auto;
     font-size: 1rem;
     display: block;
-    
-
+    overflow: hidden;
   }
+
+  .form-label {
+    margin-bottom: .5rem;
+    width: 100%;
+}
+
+
 
   @media (max-width: 767px) {
     .carousel-inner .carousel-item > div {
@@ -192,3 +207,38 @@ h3 {
   #Wrap .FollowBox:nth-child(4) {
     z-index: 1;
   }
+
+
+/* phone size */
+@media screen and (max-width: 768px) {
+  .container {
+      max-width: 500px;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .bye {
+    opacity: 0;
+  }
+
+  .container2 {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #hide {
+    display: none;
+  }
+
+  .container2 {
+    flex-direction: column;
+  }
+
+  
+
+  
+
+}
